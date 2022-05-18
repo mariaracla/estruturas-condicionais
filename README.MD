@@ -148,6 +148,31 @@ console.log(`O valor total da sua compra é ${valorTotalDaCompra}`)
  // Não precisamos botar "se for b, c, d... é consoante" porque se verificar a condição, e ver que ela é falsa, ou seja, não é "a, e, i o ou u", só pode ser consoante, então já cai no escopo do else.
 
  ```
+ #### Também existe a possibilidade de ter mais de uma condição na estrutura, utilizando o else if. Veja a seguir:
+ 
+ ```jsx
+ 
+ /* Faça um script que leia três números inteiros e mostre o maior deles.*/
+
+let numero1 = 10
+let numero2 = 15
+let numero3 = 27
+let maiorNumero
+if(numero1 > numero2 && numero1 > numero3){
+    maiorNumero = numero1
+ console.log(`Os três numeros são: ${numero1}, ${numero2} e ${numero3}; e o maior número é o ${maiorNumero}`)
+}else if (numero2 > numero1 && numero2 > numero3){
+    maiorNumero = numero2
+    console.log(`Os três numeros são: ${numero1}, ${numero2} e ${numero3}; e o maior número é o ${maiorNumero}`)
+}else if(numero3 > numero1 && numero3 > numero2){
+    maiorNumero = numero3
+    console.log(`Os três numeros são: ${numero1}, ${numero2} e ${numero3}; e o maior número é o ${maiorNumero}`)
+}
+```
+ 
+- Está dizendo basicamente: se o numero 1 for maior que o numero 2 e maior que o numero 3, ele é o maior. Se isso for falso, então verifica (else if) se o numero 2 é maior do que o numero 1 e 3, se isso for verdadeiro, então ele é o maior. Mas se for falso, então verifica se (else if) o 3 é maior do que o 1 e 2. Se for verdadeiro, ele é o maior número. 
+ 
+ 
 
  # Switch case
 
@@ -416,7 +441,7 @@ default: console.log('horario invalido')
 
 
 
-## Materiais de reforço:
+## Materiais de reforço (teoria e mais exercícios para praticar):
 #### Operador ternário:
 https://programadorviking.com.br/if-ternario-javascript/
 
