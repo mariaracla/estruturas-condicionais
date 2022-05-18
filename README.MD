@@ -11,18 +11,18 @@ Estrutura do operador ternário:
 
 condição ? caso seja verdadeiro : caso seja falso
 
-1- Você irá passar o que quer verificar e a condição 
-2- Vai passar, depois do '?', o que você quer que aconteça caso a condição seja verdadeira
-3- Vai passar, depois do ':', o que você quer que aconteça caso a condição seja falsa
+- Você irá passar o que quer verificar e a condição 
+- Vai passar, depois do '?', o que você quer que aconteça caso a condição seja verdadeira
+- Vai passar, depois do ':', o que você quer que aconteça caso a condição seja falsa
 
 ### Exemplo:
 ```jsx 
 let valor = 5
 valor > 10 ? console.log('o valor é maior do que 10') : console.log('o valor não é maior do que 10')
 ```
-1- Verificou a variável valor e a condição que botou é se ela é maior que 10
-2- O que acontece caso a var seja maior que 10 (verdadeiro)
-3- O que acontece caso a var seja menor do que 10 (falso)
+- Verificou a variável valor e a condição que botou é se ela é maior que 10
+- O que acontece caso a var seja maior que 10 (verdadeiro)
+- O que acontece caso a var seja menor do que 10 (falso)
 
 #### Também é possível armazenar o operador ternário em uma variável e deixá-lo mais complexo
 
@@ -90,9 +90,9 @@ console.log('Você pode votar esse ano.')
 
 ```
 
-1- Verificamos a variável anoDeNascimento e se ela era menor ou igual a 2006.
-2- Se isso fosse verdadeiro, aconteceria tudo o que está dentro do escopo do if, ou seja: apareceria a mensagem dizendo que a pessoa pode votar esse ano.
-3- Se fosse falso, aconteceria o que está dentro do escopo do else, ou seja: a mensagem dizendo que não pode votar esse ano.
+- Verificamos a variável anoDeNascimento e se ela era menor ou igual a 2006.
+- Se isso fosse verdadeiro, aconteceria tudo o que está dentro do escopo do if, ou seja: apareceria a mensagem dizendo que a pessoa pode votar esse ano.
+- Se fosse falso, aconteceria o que está dentro do escopo do else, ou seja: a mensagem dizendo que não pode votar esse ano.
 
 ```jsx
 
