@@ -33,7 +33,7 @@ let hora = 3
 
 let resultado = hora >= 0 && hora <=5 ? 'madrugada ' :
 hora >=6 && hora <=11 ? 'manhã' :
-hora >=12 && hora <= 18 ? 'tarde' :
+hora >=12 && hora <= 17 ? 'tarde' :
 hora >=18 && hora <= 23 ? 'noite' :
 'horario invalido'
 
@@ -45,7 +45,7 @@ Nesse exemplo, armazenamos a estrutura na variável chamada resultado. Nesse cas
 
 Verificamos a variável hora e passamos condições para ela. 
 É como se tivéssemos falado:
-hora é maior ou igual a 0 e menor ou igual a 5? se for, aparece madrugada. se não for, verifica se ela é maior ou igual a 6, e menor ou igual a 11? se for, aparece manhã. se não for, verifica se ela é maior ou igual a 12, e menor ou igual 18? se for, aparece tarde. se não for, verifica se ela é maior ou igual a 18 e menor ou igual a 23? se for, aparece noite. se não for, aparece horário inválido. 
+hora é maior ou igual a 0 e menor ou igual a 5? se for, aparece madrugada. se não for, verifica se ela é maior ou igual a 6, e menor ou igual a 11? se for, aparece manhã. se não for, verifica se ela é maior ou igual a 12, e menor ou igual 17? se for, aparece tarde. se não for, verifica se ela é maior ou igual a 18 e menor ou igual a 23? se for, aparece noite. se não for nada disso, aparece horário inválido. 
 
 ### Mais um exemplo:
 
@@ -156,10 +156,11 @@ switch (aqui você passa o que irá verificar){
 case "seja isso": acontece isso
 break; pra parar de rodar porque já aconteceu o que era preciso.
 
-default: caso não seja nada, cai aqui
+default: caso seja falso, cai aqui
 }
 
-O switch não recebe condição e sim o que vai avaliar, uma variavel pode-se dizer. E aí tem os cases, e cada um é uma condição.
+O switch não recebe condição em casos mais fixos, e sim o que vai avaliar, uma variavel pode-se dizer. E aí tem os cases, e cada um é uma condição.
+Em casos mais complexos, as condições vão no switch e os cases são 'true' ou 'false'. Veremos exempelos disso a seguir.
 
 ### Exemplos:
 ```jsx
@@ -177,10 +178,10 @@ break
 default: console.log("usuario não reconhecido") 
 }
 ```
-1- verificamos a variável usuario
-2- dentro do escopo do switch, dissemos: CASO seja "comum": aparece isso e para de rodar o código (break); caso seja "empresa": aparece isso e para de rodar o código (break); caso seja "gerente": aparece isso e para de rodar o código. Se não for nem comum, nem empresa, nem gerente, cai no dafault, e aparece isso.
+- verificamos a variável usuario
+- dentro do escopo do switch, dissemos: CASO seja "comum": aparece isso e para de rodar o código (break); caso seja "empresa": aparece isso e para de rodar o código (break); caso seja "gerente": aparece isso e para de rodar o código. Se não for nem comum, nem empresa, nem gerente, cai no dafault, e aparece isso.
 
-Ele vai verificando em sequência, se já atender o que queremos no primeiro case, o break faz o código parar de rodar ali. Se não atender, ele passa pra próxima linha, verifica e se atender, o break faz parar de rolar o código ali.
+Ele vai verificando em sequência, se já atender o que queremos no primeiro case, o break faz o código parar de rodar ali. Se não atender, ele passa pra próxima linha, verifica e se atender, o break faz parar de rodar o código ali.
 
 ### O problema de não usar o break:
 
@@ -201,7 +202,7 @@ default: console.log("usuario não reconhecido")
 }
 ```
 Nesse caso, sem o break:
-Ele passou na linha 1, fez a conta. Depois foi na linha 2, fez a conta de novo e juntou ao resultado anterior...até a ultima linha ele fez isso. E não é o que queremos. Queremos que verifique o cargo e faça a multiplicação referente somente a aquele cargo. Nesse caso do exemplo, ele multiplicou o 2000 por 1.15, 1.10, 1.05. 
+ 
 ```jsx 
 var cargo = "gerente";
 var salario = 2000;
@@ -218,7 +219,7 @@ switch (cargo) {
 console.log(salario);
 
 ```
-
+Ele passou na linha 1, fez a conta. Depois foi na linha 2, fez a conta de novo e juntou ao resultado anterior...até a ultima linha ele fez isso. E não é o que queremos. Queremos que verifique o cargo e faça a multiplicação referente somente a aquele cargo. Nesse caso do exemplo, ele multiplicou o 2000 por 1.15, 1.10, e 1.05.
 
 
 ```jsx
